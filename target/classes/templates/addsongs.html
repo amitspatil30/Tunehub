@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    margin:0px;
+    padding: 0;
+    background-color: black;
+}
+
+form {
+    width: 300px;
+    margin: 82px auto;
+    background-color: #fff;
+    padding: 42px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+    color:orange;
+}
+h1 {
+    text-align: center;
+    margin-top: 5px;
+    color: orange;
+}
+.navbar {
+	background-color: orange;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	margin-left: 20px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+	background-color: #555;
+	color: orange;
+}
+	
+</style>
+</head>
+<body>
+<div class="navbar">
+		<div class="logo">MusicPro</div>
+		<div class="nav-links">
+			<a href="/map-goback">BACK</a>
+			<a href="/map-logout">LOGOUT</a>
+			
+		</div>
+	</div>
+<form action="/addsongs" method="post">
+<h1>ADD SONGS</h1>
+<label>Song Name : </label>
+<input type="text" name="name" placeholder="Enter song name" required="required" />
+<br>
+<br>
+<label>Song Artist : </label>
+<input type="text" name="artist" placeholder="Enter artist name" required="required" />
+<br>
+<br>
+<label>Song Genre : </label>
+<input type="text" name="genre" placeholder="Enter genre name" required="required" />
+<br>
+<br>
+<label>Song Link : </label>
+<input type="text" name="link" placeholder="Enter link here" required="required" />
+<br>
+<br>
+
+
+<input type="submit" value="ADD SONGS" />
+
+
+</form>
+
+</body>
+</html>

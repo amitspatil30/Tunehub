@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:
+		url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	 min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    	 font-size: 50px; 
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+    color:orange;
+}
+.navbar {
+	background-color: orange;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	margin-left: 20px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+	background-color: #555;
+	color: orange;
+}
+a
+{
+text-decoration: none;
+}
+footer {
+    background-color:orange;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">
+		<div class="logo">TuneHub</div>
+		<div class="nav-links">
+			<a href="/map-logout">LOGOUT</a>
+			
+		</div>
+	</div>
+<h1>Welcome to Customer Home</h1>
+<a href="/exploreSongs"><button>Explore SONGS</button></a>
+
+<br></br>
+
+<footer>
+        <p>&copy; 2024 TuneHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

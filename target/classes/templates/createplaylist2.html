@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: black;
+}
+
+form {
+    width: 300px;
+    margin: 160px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+
+input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+    color:orange;
+}
+h1{
+text-align: center;
+    margin-top: 5px;
+    color: orange;
+}
+ button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 12px 132px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ button:hover {
+    background-color: #555;
+    color: orange;
+}
+.navbar {
+	background-color: orange;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	margin-left: 20px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+	background-color: #555;
+	color: orange;
+}
+	
+</style>
+</head>
+<body>
+<div class="navbar">
+		<div class="logo">MusicPro</div>
+		<div class="nav-links">
+			<a href="/map-goback1">BACK</a>
+			<a href="/map-logout">LOGOUT</a>
+			
+		</div>
+	</div>
+
+	<form action="/addplaylist" method="post">
+	<h1>CREATE PLAYLIST</h1>
+		<label>PlayList Name : </label> <input type="text" name="name" /> <br>
+		<br>
+
+		<div th:each="s:${songslist}">
+			<input type="checkbox" th:name="song" th:value="${s.id}" /> <label
+				th:text="${s.name}"></label>
+		</div>
+		
+		<input type="submit" value="ADD PLAYLIST" />
+		
+
+
+	</form>
+
+	
+
+</body>
+</html>

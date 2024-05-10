@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color:black;
+}
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	padding: 20px;
+}
+
+.card {
+	width: 300px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.card-header {
+	background-color: orange;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.card-body {
+	padding: 10px;
+}
+
+.card-body p {
+	margin: 5px 0;
+}
+
+audio {
+	width: 100%;
+}
+.navbar {
+	background-color: orange;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	margin-left: 20px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+	background-color: #555;
+	color: orange;
+}
+</style>
+</head>
+<body>
+
+	<div class="navbar">
+		<div class="logo">MusicPro</div>
+		<div class="nav-links">
+			<a href="/map-goback1">BACK</a>
+			<a href="/map-logout">LOGOUT</a>
+			
+		</div>
+	</div>
+	<div class="card-container">
+		<!-- Loop through each song and create a card for it -->
+		<div th:each="song : ${songs}" class="card">
+			<div class="card-header">
+				<h2 th:text="'ID: ' + ${song.id}"></h2>
+				<h2 th:text="${song.name}"></h2>
+				<p th:text="${song.artist}"></p>
+			</div>
+			<div class="card-body">
+				<p>
+					<strong>Genre:</strong> <span th:text="${song.genre}"></span>
+				</p>
+				<audio controls>
+					<source th:src="${song.link}" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
